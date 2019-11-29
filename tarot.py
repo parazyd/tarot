@@ -30,7 +30,7 @@ def draw_random_card(deck):
     return deck[randint(0, len(deck)-1)]
 
 
-def main(out='text'):
+def main(out='html'):
     reader = readers[randint(0, len(readers)-1)]
     drawn = []
     index = 0
@@ -85,7 +85,7 @@ def main(out='text'):
 
 
 if __name__ == '__main__':
-    if len(argv) > 1 and argv[1] == '--html':
-        main(out='html')
+    if len(argv) > 1 and argv[1] == '--text':
+        main(out='text')
     else:
-        main()
+        main(out='html')
